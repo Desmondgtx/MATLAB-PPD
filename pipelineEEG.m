@@ -7,11 +7,11 @@ clear all; clc
 % Open folder
 %%%%% Change folder
 cfg = []; 
-cfg.dir = ['C:\Users\yangy\OneDrive\Escritorio\PPD\eeg']; 
+cfg.dir = ['C:\Users\yangy\Desktop\PPD\eeg']; 
 
 % Import data
 %%%%% Change route and name of eeg data
-EEG = pop_biosig('C:\Users\yangy\OneDrive\Escritorio\PPD\eeg\eeg_raw_data\', 'importannot','off');
+EEG = pop_biosig('C:\Users\yangy\Desktop\PPD\eeg\eeg_raw_data\', 'importannot','off');
 eeglab redraw; 
 
 
@@ -47,12 +47,9 @@ eeglab redraw;
 
 %% Behavioral Data
 
-% Folder with data (RAW_BEH)
-cd('C:\Users\yangy\OneDrive\Escritorio\PPD\Data EEG PPD');
-
 % Import data
 %%%%% Change data name
-data = readtable('C:\Users\yangy\OneDrive\Escritorio\PPD\Data EEG PPD\003\RAW_BEH\');
+data = readtable('C:\Users\yangy\Desktop\PPD\eeg\beh_data\');
 
 % Delete extra data
 data(241:256, :) = [];
